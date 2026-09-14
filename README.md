@@ -6,12 +6,27 @@ Copy one. Paste it into Ollama, LM Studio, or any chat your DPO has already appr
 
 595 jobs. Early years through sixth form, plus the leadership desk.
 
+**Share this repo:** https://github.com/Vicariouso/open-desk
+
+The live catalogue (TypeScript source used by the site) is also public:
+
+https://github.com/Vicariouso/joshuamangas-com/tree/main/app/open-desk
+
 ## Use a prompt
 
-1. Open the shelf you need under [`prompts/`](prompts/).
-2. Copy the block under the job.
-3. Fill in the school context at the bottom.
-4. Run it on a machine you control.
+1. Copy [preamble.txt](preamble.txt).
+2. Open a job in [`app/open-desk`](https://github.com/Vicariouso/joshuamangas-com/tree/main/app/open-desk) (`items-a.ts` … `items-k.ts`).
+3. Add:
+
+```
+Job: <name>
+
+What good looks like:
+<job>
+```
+
+4. Fill in the school context at the bottom of the preamble.
+5. Run it on a machine you control.
 
 For names, health, behaviour, safeguarding or HR, keep the work off public tools.
 
@@ -26,9 +41,9 @@ For names, health, behaviour, safeguarding or HR, keep the work off public tools
 
 | Path | What it is |
 | --- | --- |
-| [`prompts/`](prompts/) | One markdown file per shelf, with the full copy-paste prompt |
-| [`items.json`](items.json) | The 595 jobs as data |
 | [`preamble.txt`](preamble.txt) | Shared instructions prepended to every job |
+| [`prompts/`](prompts/) | Shelf index |
+| [Site source](https://github.com/Vicariouso/joshuamangas-com/tree/main/app/open-desk) | All 595 jobs (`items-a.ts` to `items-k.ts`) |
 
 ## Licence
 
